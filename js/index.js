@@ -12,7 +12,7 @@ function validarFormulario() {
     let correo = document.getElementById("correo").value.trim();
     let telefono = document.getElementById("telefono").value.trim();
     let fechaNacimiento = document.getElementById("fechaNacimiento").value;
-    let codigoPostal = document.getElementById("codigoPostal").value.trim();
+
 
     if (!soloLetras(nombre)) {
         return;
@@ -30,15 +30,15 @@ function validarFormulario() {
         return;
     }
 
-    if (!validarLongitud(telefono, 10)) {
+    let telValidado = formatearTelefono(telefono);
+    if (telValidado.startsWith("Error")) {
+        alert(telValidado);
         return;
     }
+    // Si pasó la validación, actualizamos el campo con el teléfono bonito
+    document.getElementById("telefono").value = telValidado;
 
     if (!esMayorDeEdad(fechaNacimiento)) {
-        return;
-    }
-
-    if (!validarCodigoPostal(codigoPostal)) {
         return;
     }
 
