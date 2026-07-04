@@ -172,13 +172,36 @@ if(rfc) {
     console.log("El RFC básico generado es: " + rfc);
 }
 ```
-
 ## Capturas de Pantalla
+A continuación se muestran capturas que demuestran el funcionamiento de las validaciones de la librería en tiempo real:
 
-*(Nota para el alumno: Agrega aquí las capturas de pantalla de la consola mostrando los resultados de las funciones, o de las alertas en el navegador)*
+### 1. Pruebas de Campos Vacíos y Texto
+![Formulario Vacío](img/formularioVacio.png)
+*Vista inicial del formulario vacío.*
 
-*Ejemplo de cómo insertar una imagen:*
-`![Ejemplo de Consola](img/captura1.png)`
+![Validación Formulario Vacío](img/validacionFormularioVacio.png)
+*Alerta generada al intentar enviar datos vacíos.*
+
+![Validación Solo Letras](img/soloLetras.png)
+*Alerta que restringe el uso de números o símbolos en el nombre.*
+
+### 2. Pruebas de Formatos (Correo y Teléfono)
+![Correo Inválido](img/correoInvalido.png)
+*Alerta de formato de correo incorrecto usando expresiones regulares.*
+
+![Teléfono Incompleto](img/telefonoIncompleto.png)
+*Validación de la longitud requerida para el número de teléfono.*
+
+### 3. Pruebas de Fechas
+![Sin Fecha de Nacimiento](img/sinFechaNacimiento.png)
+*Alerta que exige seleccionar una fecha de nacimiento.*
+
+![Fecha Mayor a la Actual](img/fechaNacimientoMayor.png)
+*Validación lógica que impide ingresar una fecha que aún no ha ocurrido.*
+
+### 4. Resultado Exitoso
+![Formulario Validado Exitosamente](img/formularioValidado.png)
+*Formulario completamente validado, mostrando el RFC generado automáticamente y el teléfono formateado.*
 
 ## Video Demostrativo
 
