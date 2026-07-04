@@ -365,10 +365,10 @@ function validarPassword(password) {
 // Funciones propias (exactamente 2)
 
 /*
--- Funcion: Solo Números (Función Auxiliar)
--- ¿Que hace? Valida que una cadena de texto contenga únicamente números del 0 al 9.
--- Parametros: Recibe el texto o número a validar.
--- Retorno: true si solo contiene números, false si está vacío o tiene letras/símbolos.
+-- Funcion: Solo Numeros (Funcion Auxiliar)
+-- Que hace? Valida que una cadena de texto contenga unicamente numeros del 0 al 9
+-- Parametros: Recibe el texto o numero a validar
+-- Retorno: true si solo contiene numeros, false si esta vacio o tiene letras/simbolos
 */
 function soloNumeros(texto) {
     let expresion = /^[0-9]+$/;
@@ -379,23 +379,23 @@ function soloNumeros(texto) {
 }
 
 /*
--- Funcion: Formatear Número de Teléfono
--- ¿Que hace? Toma un número de teléfono escrito de corrido y le da un formato visual 
---            profesional (ej. (951) 123-4567). Resuelve el problema de la mala legibilidad
---            y presentación de datos en bases de datos e interfaces de usuario.
--- Parametros: Recibe un número o texto (ej. "9511234567").
--- Retorno: El número formateado en texto, o un mensaje de error si no tiene 10 dígitos.
+-- Funcion: Formatear Numero de Telefono
+-- Que hace? Toma un numero de telefono escrito de corrido y le da un formato visual 
+--            profesional (ej (951) 123-4567) Resuelve el problema de la mala legibilidad
+--            y presentacion de datos en bases de datos e interfaces de usuario
+-- Parametros: Recibe un numero o texto (ej "9511234567")
+-- Retorno: El numero formateado en texto, o un mensaje de error si no tiene 10 digitos
 */
 function formatearTelefono(telefono) {
-    // Convertir a texto y quitarle cualquier espacio o guión que el usuario haya puesto por error
+    // Convertir a texto y quitarle cualquier espacio o guion que el usuario haya puesto por error
     let telLimpio = String(telefono).replace(/[\s-]/g, '');
 
-    // Reutilizar la función soloNumeros para validar que no haya letras
+    // Reutilizar la funcion soloNumeros para validar que no haya letras
     if (!soloNumeros(telLimpio)) {
         return "Error: El teléfono contiene letras o caracteres inválidos.";
     }
 
-    // Un teléfono estándar en México tiene 10 dígitos
+    // Un telefono estandar en Mexico tiene 10 digitos
     if (telLimpio.length !== 10) {
         return "Error: El teléfono debe tener exactamente 10 dígitos.";
     }
