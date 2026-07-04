@@ -1,0 +1,143 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #533b02;
+    margin: 0;
+    padding: 40px;
+}
+
+.contenedor {
+    width: 500px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 32px;
+    border: 1px solid #ddd;
+}
+
+.titulo {
+    text-align: center;
+    color: #47370e;
+    font-size: 28px;
+    margin-bottom: 25px;
+    margin-top: 5px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 10px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.entrada {
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 15px;
+    font-size: 15px;
+}
+
+.entrada:focus {
+    outline: none;
+    border-color: #5b2702;
+}
+
+.contenedor-imagen {
+    text-align: center;
+}
+
+.imagen {
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+}
+
+.boton {
+    padding: 10px;
+    background-color: #5b2702;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+/* Color del botón al pasar el mouse */
+.boton:hover {
+    background-color: #ba6905;
+}
+
+.boton-secundario {
+    background-color: #777777;
+}
+
+.enlaces {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.enlaces a {
+    color: #5b2702;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.enlaces a:hover {
+    color: #0547ba;
+    text-decoration: underline;
+}
+
+/* Ventana modal */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.contenido-modal {
+    background-color: white;
+    width: 350px;
+    margin: 150px auto;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.contenido-modal h2 {
+    color: #47370e;
+    margin-top: 5px;
+}
+
+.contenido-modal p {
+    color: #333333;
+}
+
+.cerrar {
+    float: right;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #5b2702;
+}
+
+.cerrar:hover {
+    color: #baab05;
+}

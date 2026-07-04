@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con utileria.js</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <div class="contenedor">
+        <h1 class="titulo">Formulario de Registro</h1>
+
+        <form id="formularioRegistro" class="formulario">
+
+            <div class="campo">
+                <label for="nombre">Nombre(s):</label>
+                <input type="text" id="nombre" name="nombre" class="entrada" placeholder="Ejemplo: Miguel Angel">
+            </div>
+
+            <div class="campo">
+                <label for="apellidoPaterno">Apellido paterno:</label>
+                <input type="text" id="apellidoPaterno" name="apellidoPaterno" class="entrada"
+                    placeholder="Ejemplo: Perez">
+            </div>
+
+            <div class="campo">
+                <label for="apellidoMaterno">Apellido materno:</label>
+                <input type="text" id="apellidoMaterno" name="apellidoMaterno" class="entrada"
+                    placeholder="Ejemplo: Garcia">
+            </div>
+
+            <div class="campo">
+                <label for="correo">Correo electronico:</label>
+                <input type="text" id="correo" name="correo" class="entrada" placeholder="Ejemplo: usuario@gmail.com">
+            </div>
+
+            <div class="campo">
+                <label for="telefono">Telefono:</label>
+                <input type="text" id="telefono" name="telefono" class="entrada" placeholder="Maximo 10 digitos">
+            </div>
+
+            <div class="campo">
+                <label for="fechaNacimiento">Fecha de nacimiento:</label>
+                <input type="date" id="fechaNacimiento" name="fechaNacimiento" class="entrada">
+            </div>
+
+            <div class="campo">
+                <label for="codigoPostal">Codigo postal:</label>
+                <input type="text" id="codigoPostal" name="codigoPostal" class="entrada" placeholder="Ejemplo: 55210">
+            </div>
+
+            <div class="campo">
+                <label for="rfc">RFC Generado:</label>
+                <input type="text" id="rfc" name="rfc" class="entrada" readonly placeholder="Se generara al validar">
+            </div>
+
+            <button type="button" id="botonValidar" name="botonValidar" class="boton">Validar formulario</button>
+
+            <button type="reset" id="botonLimpiar" name="botonLimpiar" class="boton">Limpiar</button>
+        </form>
+
+        <div class="enlaces">
+            <a href="login.html">Ir al login</a>
+        </div>
+    </div>
+
+    <!-- Ventana modal -->
+    <div id="modalEdad" class="modal">
+        <div class="contenido-modal">
+            <h2>Datos validados correctamente</h2>
+            <p id="mensajeEdad"></p>
+            <p id="mensajeMayorEdad"></p>
+            <button type="button" id="botonCerrarModal" class="boton">Aceptar</button>
+        </div>
+    </div>
+
+    <script src="js/utileria.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
