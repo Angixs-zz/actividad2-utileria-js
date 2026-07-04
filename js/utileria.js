@@ -371,18 +371,22 @@ function validarPassword(password) {
 -- Retorno: true si solo contiene numeros, false si esta vacio o tiene letras/simbolos
 */
 function soloNumeros(texto) {
+    //pues primero agregamos una funcion regular para que pues acepte solo numeros
+    // sabemos que comienza con barras invertidas dentro de los corchetes estan los numeros a aceptar del 0 al 9
+    // nos dice que debe tener 1 o mas caracteres
     let expresion = /^[0-9]+$/;
+    //ahora revisamos si el texto esta vacio
     if (texto === "") {
         return false;
     }
+    // y al final retornamos la funcion test que nos dice si el texto es valido
     return expresion.test(texto);
 }
 
 /*
 -- Funcion: Formatear Numero de Telefono
 -- Que hace? Toma un numero de telefono escrito de corrido y le da un formato visual 
---            profesional (ej (951) 123-4567) Resuelve el problema de la mala legibilidad
---            y presentacion de datos en bases de datos e interfaces de usuario
+--            mas estetico (ej (951) 123-4567) Asi ayuda a una mejor integracion de loos datos
 -- Parametros: Recibe un numero o texto (ej "9511234567")
 -- Retorno: El numero formateado en texto, o un mensaje de error si no tiene 10 digitos
 */

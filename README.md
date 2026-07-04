@@ -153,12 +153,12 @@ if(soloNumeros("12345")) {
 ```
 
 #### 8. `formatearTelefono(telefono)`
-Toma un número de teléfono escrito de corrido y le aplica un formato visual estándar `(XXX) XXX-XXXX`. **Problema que resuelve:** Mejora la legibilidad de los datos de contacto y estandariza cómo se guardan o muestran los teléfonos, evitando que se vean como una cadena de texto incomprensible en la interfaz. Usa internamente la función `soloNumeros` para validar.
+Toma un número de teléfono escrito de corrido y le aplica un formato visual estándar `(XXX) XXX-XXXX`. Esto ayuda para que se puedan leer mejor los datos de un contacto, dando una mejor estandarizacion y evita que los numeros telefonicos se muestren feos y desordenados. Asi tambien se apoya de la función `soloNumeros` para validar.
 
 ```javascript
 let telefonoUsuario = "9511234567";
 let telFormateado = formatearTelefono(telefonoUsuario);
-console.log(telFormateado); // Salida: (951) 123-4567
+console.log(telFormateado); // Obtenemos (951) 123-4567
 ```
 
 #### 8. `generarRFCBasico(nombre, apellidoPaterno, apellidoMaterno, fechaNacimiento)`
@@ -192,4 +192,5 @@ Puedes probar los formularios funcionando en vivo con las validaciones de esta l
 
 *(Nota para el alumno: Reemplaza el siguiente enlace con tu enlace real de GitHub Pages)*
 
-[**Ver Proyecto en Vivo - GitHub Pages**](https://tu-usuario.github.io/tu-repositorio/)
+[**Ver Repositorio - GitHub Pages**](https://github.com/Angixs-zz/actividad2-utileria-js)
+[**Ver Pagina en Vivo - GitHub Pages**](https://angixs-zz.github.io/actividad2-utileria-js/index.html)
