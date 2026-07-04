@@ -7,7 +7,7 @@
 -- Retorno: true si el correo es valido, false si no lo es
 */
 function validarCorreo(correo) {
-    let expresion = /^[^\s@.]+@[^\s@.]+\.[^\s@.]+$/;
+    let expresion = /^[^\s@.]+@[^\s@.]+\.[^\s@]+$/;
     //Ocupa una expresioon regular y se desglosa asi
     // La barra diagonal / nos dice que inicia la expresion
     // ^ Aqui nos dice que va a inciar el texto y luego ya vienen los grupoos a validar
@@ -25,7 +25,8 @@ function validarCorreo(correo) {
     // En este pues lo mismoo comienza con ^ y son los caracteres que no va a permitir, no permite espacios en blanco nin arrobas ni puntos
     // igual sigue un + q noos dice que deben tener 1 o mas caracteres
     // Despues sigue \. que nos dice que obligatoriamente debe haber un punto despues del bloque anterior
-    // Por ultimo tenemos el ultimo bloque que es igual al anterior, no se permiten espacios en blanco, ni arroobas ni puntos y que hayan mas o uno caracteres
+    // Por ultimo tenemos el ultimo bloque que es igual al anterior, no se permiten espacios en blanco, ni arroobas y que hayan mas o uno caracteres
+    // aqui si permitimos punto porque pueden tener como itoxaca.edu.mx
     // De ahi tenemos el el signoo de $ que significa que hasta aqui termina el texto y 
     // / indica que termina la expresion regular
 
@@ -363,35 +364,49 @@ function validarPassword(password) {
 //--------------------------------------------------------------
 // Funciones propias (exactamente 2)
 
-//valida que el codigo postal tenga exactamente 5 digitos
-function validarCodigoPostal(codigo) {
-    // Aquii coonveritmos el codigo postal a texto y usamoos trim para quitar espacios al inicio o al final
-    let codigoPostal = String(codigo).trim();
-    /*
-    validacion 1: campo vacio
-        si el campo esta vacio entonces se muestra una alerta
-        la alerta indica que debe ingresar el codigo postal
-        y de ahi retorna false para que no continue la validacion
-    */
-    if (codigoPostal === "") {
-        alert("Ingrese el codigo postal");
+/*
+-- Funcion: Solo Números (Función Auxiliar)
+-- ¿Que hace? Valida que una cadena de texto contenga únicamente números del 0 al 9.
+-- Parametros: Recibe el texto o número a validar.
+-- Retorno: true si solo contiene números, false si está vacío o tiene letras/símbolos.
+*/
+function soloNumeros(texto) {
+    let expresion = /^[0-9]+$/;
+    if (texto === "") {
         return false;
     }
-    // aqui se recorre el codigo postal caracter por caracter esto sirve para revisar que solo tenga numeros
-    for (let i = 0; i < codigoPostal.length; i++) {
-        let caracter = codigoPostal[i];
-        if (caracter < "0" || caracter > "9") {
-            alert("El código postal solo debe contener números");
-            return false;
-        }
-    }
-    // si no tiene 5 digitos entonces se muestra una alerta
-    if (codigoPostal.length !== 5) {
-        alert("El codigo postal debe tener exactamente 5 digitos");
-        return false;
+    return expresion.test(texto);
+}
+
+/*
+-- Funcion: Formatear Número de Teléfono
+-- ¿Que hace? Toma un número de teléfono escrito de corrido y le da un formato visual 
+--            profesional (ej. (951) 123-4567). Resuelve el problema de la mala legibilidad
+--            y presentación de datos en bases de datos e interfaces de usuario.
+-- Parametros: Recibe un número o texto (ej. "9511234567").
+-- Retorno: El número formateado en texto, o un mensaje de error si no tiene 10 dígitos.
+*/
+function formatearTelefono(telefono) {
+    // Convertir a texto y quitarle cualquier espacio o guión que el usuario haya puesto por error
+    let telLimpio = String(telefono).replace(/[\s-]/g, '');
+
+    // Reutilizar la función soloNumeros para validar que no haya letras
+    if (!soloNumeros(telLimpio)) {
+        return "Error: El teléfono contiene letras o caracteres inválidos.";
     }
 
-    return true;
+    // Un teléfono estándar en México tiene 10 dígitos
+    if (telLimpio.length !== 10) {
+        return "Error: El teléfono debe tener exactamente 10 dígitos.";
+    }
+
+    // Extraer las partes usando substring
+    let lada = telLimpio.substring(0, 3);
+    let primeraParte = telLimpio.substring(3, 6);
+    let segundaParte = telLimpio.substring(6, 10);
+
+    // Retornar con el formato (XXX) XXX-XXXX
+    return "(" + lada + ") " + primeraParte + "-" + segundaParte;
 }
 
 /*
