@@ -391,8 +391,8 @@ function soloNumeros(texto) {
 -- Retorno: El numero formateado en texto, o un mensaje de error si no tiene 10 digitos
 */
 function formatearTelefono(telefono) {
-    // Convertir a texto y quitarle cualquier espacio o guion que el usuario haya puesto por error
-    let telLimpio = String(telefono).replace(/[\s-]/g, '');
+    // Convertir a texto y quitarle espacios, guiones y parentesis
+    let telLimpio = String(telefono).replace(/[\s\-\(\)]/g, '');
 
     // Reutilizar la funcion soloNumeros para validar que no haya letras
     if (!soloNumeros(telLimpio)) {

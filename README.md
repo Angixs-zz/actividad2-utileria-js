@@ -153,12 +153,14 @@ if(soloNumeros("12345")) {
 ```
 
 #### 8. `formatearTelefono(telefono)`
-Toma un número de teléfono escrito de corrido y le aplica un formato visual estándar `(XXX) XXX-XXXX`. Esto ayuda para que se puedan leer mejor los datos de un contacto, dando una mejor estandarizacion y evita que los numeros telefonicos se muestren feos y desordenados. Asi tambien se apoya de la función `soloNumeros` para validar.
+Toma un número de teléfono escrito de corrido (o uno que ya tenga paréntesis y guiones) y le aplica o asegura un formato visual estándar `(XXX) XXX-XXXX`. Esto ayuda para que se puedan leer mejor los datos de un contacto, dando una mejor estandarizacion y evita que los numeros telefonicos se muestren feos y desordenados. Asi tambien se apoya de la función `soloNumeros` para validar.
 
 ```javascript
-let telefonoUsuario = "9511234567";
-let telFormateado = formatearTelefono(telefonoUsuario);
-console.log(telFormateado); // Obtenemos (951) 123-4567
+// Soporta números corridos
+console.log(formatearTelefono("9511234567")); // Obtenemos (951) 123-4567
+
+// Y también soporta números con espacios, guiones o paréntesis
+console.log(formatearTelefono("(951) 123-4567")); // Lo limpia y devuelve (951) 123-4567
 ```
 
 #### 8. `generarRFCBasico(nombre, apellidoPaterno, apellidoMaterno, fechaNacimiento)`
