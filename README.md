@@ -218,4 +218,5 @@ Puedes probar los formularios funcionando en vivo con las validaciones de esta l
 *(Nota para el alumno: Reemplaza el siguiente enlace con tu enlace real de GitHub Pages)*
 
 [**Ver Repositorio - GitHub Pages**](https://github.com/Angixs-zz/actividad2-utileria-js)
+
 [**Ver Pagina en Vivo - GitHub Pages**](https://angixs-zz.github.io/actividad2-utileria-js/index.html)
