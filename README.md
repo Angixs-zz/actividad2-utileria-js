@@ -177,31 +177,31 @@ A continuación se muestran capturas que demuestran el funcionamiento de las val
 
 ### 1. Pruebas de Campos Vacíos y Texto
 ![Formulario Vacío](img/formularioVacio.png)
-*Vista inicial del formulario vacío.*
+*Vista inicial del formulario vacio.*
 
 ![Validación Formulario Vacío](img/validacionFormularioVacio.png)
-*Alerta generada al intentar enviar datos vacíos.*
+*Visualizacion de una alerta al intentar enviar datos vacios.*
 
 ![Validación Solo Letras](img/soloLetras.png)
-*Alerta que restringe el uso de números o símbolos en el nombre.*
+*Alerta que restringe el uso de numeros o simbolos en el nombre, apellidoo paterno y apellido materno.*
 
 ### 2. Pruebas de Formatos (Correo y Teléfono)
 ![Correo Inválido](img/correoInvalido.png)
-*Alerta de formato de correo incorrecto usando expresiones regulares.*
+*Alerta de formato de correo incorrecto.*
 
 ![Teléfono Incompleto](img/telefonoIncompleto.png)
-*Validación de la longitud requerida para el número de teléfono.*
+*Alerta que valida la cantidad de digitos que debe tener el numero telefonico.*
 
 ### 3. Pruebas de Fechas
 ![Sin Fecha de Nacimiento](img/sinFechaNacimiento.png)
 *Alerta que exige seleccionar una fecha de nacimiento.*
 
 ![Fecha Mayor a la Actual](img/fechaNacimientoMayor.png)
-*Validación lógica que impide ingresar una fecha que aún no ha ocurrido.*
+*Alerta que notifica que no se puede registrar una fecha mayor a la actual.*
 
 ### 4. Resultado Exitoso
 ![Formulario Validado Exitosamente](img/formularioValidado.png)
-*Formulario completamente validado, mostrando el RFC generado automáticamente y el teléfono formateado.*
+*Vista exitosa del formulario una vez que todas las validaciones han sido completadas y muestra el modal que sale mostrando la edad de la persona registrada.*
 
 ## Video Demostrativo
 
