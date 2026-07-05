@@ -174,8 +174,8 @@ if(rfc) {
 ```
 ### Pruebas en consola
 
-Se agregó un archivo `pruebas.js` para ejecutar pruebas de las funciones principales de la librería `utileria.js`.  
-Los resultados se muestran en la consola del navegador mediante `console.log()`, comprobando que las funciones regresan valores correctos.
+Se agregaron pruebas de las funciones principales directamente al final del archivo `js/index.js`.
+Al abrir el formulario principal en el navegador, los resultados se muestran automáticamente en la consola presionando `F12`, comprobando mediante `console.log()` que las funciones regresan valores correctos.
 
 ## Capturas de Pantalla
 A continuación se muestran capturas que demuestran el funcionamiento de las validaciones de la librería en tiempo real:
@@ -207,6 +207,10 @@ A continuación se muestran capturas que demuestran el funcionamiento de las val
 ### 4. Resultado Exitoso
 ![Formulario Validado Exitosamente](img/formularioValidado.png)
 *Vista exitosa del formulario una vez que todas las validaciones han sido completadas y muestra el modal que sale mostrando la edad de la persona registrada.*
+
+### 5. Resultado de pruebas existosas en consola
+![Formulario Validado Exitosamente](img/pruebasTrue.png)
+*Vista de la consola devolviendo un resultado true a las pruebas implementadas*
 
 ## Video Demostrativo
 
