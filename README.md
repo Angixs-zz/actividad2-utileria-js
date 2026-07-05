@@ -172,6 +172,11 @@ if(rfc) {
     console.log("El RFC básico generado es: " + rfc);
 }
 ```
+### Pruebas en consola
+
+Se agregó un archivo `pruebas.js` para ejecutar pruebas de las funciones principales de la librería `utileria.js`.  
+Los resultados se muestran en la consola del navegador mediante `console.log()`, comprobando que las funciones regresan valores correctos.
+
 ## Capturas de Pantalla
 A continuación se muestran capturas que demuestran el funcionamiento de las validaciones de la librería en tiempo real:
 
