@@ -251,9 +251,9 @@ A continuación se muestran capturas que demuestran el funcionamiento de las val
 En el siguiente video se explica el problema que resuelve la librerIa.
 [**Ver Video**](https://youtu.be/sbdv5GXfRt8)
 
-## Enlace a GitHub Pages
+## Enlace a GitHub
 
 Puedes acceder a los formularios funcionando en vivo con las validaciones de esta librería en el siguiente enlace:
 [**Ver Repositorio**](https://github.com/Angixs-zz/actividad2-utileria-js)
 
-[**Ver Pagina en Vivo - GitHub Pages**](https://angixs-zz.github.io/actividad2-utileria-js/index.html)
+[**Ver Pagina en Vivo**](https://angixs-zz.github.io/actividad2-utileria-js/index.html)
