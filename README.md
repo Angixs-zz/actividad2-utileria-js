@@ -208,8 +208,12 @@ A continuación se muestran capturas que demuestran el funcionamiento de las val
 ![Formulario Validado Exitosamente](img/formularioValidado.png)
 *Vista exitosa del formulario una vez que todas las validaciones han sido completadas y muestra el modal que sale mostrando la edad de la persona registrada.*
 
-### 5. Resultado de pruebas existosas en consola
-![Formulario Validado Exitosamente](img/pruebasTrue.png)
+### 5. Resultado de pruebas existosas en consola para index
+![Formulario Validado Exitosamente](img/pruebasIndexTrue.png)
+*Vista de la consola devolviendo un resultado true a las pruebas implementadas*
+
+### 6. Resultado de pruebas existosas en consola para login
+![Formulario Validado Exitosamente](img/pruebasLoginTrue.png)
 *Vista de la consola devolviendo un resultado true a las pruebas implementadas*
 
 ## Video Demostrativo
