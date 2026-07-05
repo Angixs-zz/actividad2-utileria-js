@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #533b02;
@@ -6,7 +10,8 @@ body {
 }
 
 .contenedor {
-    width: 500px;
+    max-width: 500px;
+    width: 100%;
     margin: 0 auto;
     background-color: white;
     padding: 30px;
@@ -113,7 +118,8 @@ body {
 
 .contenido-modal {
     background-color: white;
-    width: 350px;
+    max-width: 350px;
+    width: 90%;
     margin: 150px auto;
     padding: 25px;
     border-radius: 20px;
@@ -140,4 +146,14 @@ body {
 
 .cerrar:hover {
     color: #baab05;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+    
+    .contenedor {
+        padding: 20px;
+    }
 }
