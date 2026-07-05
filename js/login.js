@@ -29,3 +29,16 @@ function mostrarVentanaModal() {
 function cerrarVentanaModal() {
     modalLogin.style.display = "none";
 }
+
+// ====== PRUEBAS DE LOGIN ======
+function ejecutarPruebasLogin() {
+    console.log("===== PRUEBAS DEL FORMULARIO DE LOGIN =====");
+
+    console.log("Correo correcto:", validarCorreo("usuario@gmail.com"));
+    console.log("Contraseña segura correcta:", validarPassword("Miguel@123"));
+
+    console.log("===== FIN DE PRUEBAS LOGIN =====");
+}
+
+// Ejecutar pruebas en la consola al cargar la página de login
+ejecutarPruebasLogin();

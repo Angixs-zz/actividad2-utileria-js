@@ -441,6 +441,15 @@ function generarRFCBasico(nombre, apellidoPaterno, apellidoMaterno, fechaNacimie
         alert("Ingrese la fecha de nacimiento");
         return false;
     }
+
+    /*
+    validacion 3: validar si es mayor de edad
+        aqui usamos la funcion esMayorDeEdad que ya creamos antes
+        para evitar generar el RFC a menores de edad.
+    */
+    if (!esMayorDeEdad(fechaNacimiento)) {
+        return false;
+    }
     /*
     aqui convertimos el nombre y los apellidos a mayusculas
     esto se hace porque el RFC normalmente se escribe en mayusculas

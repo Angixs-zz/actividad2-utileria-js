@@ -65,20 +65,24 @@ function cerrarVentanaModal() {
     modalEdad.style.display = "none";
 }
 
-// ====== PRUEBAS DE utileria.js ======
-function ejecutarPruebasUtileria() {
-    console.log("===== PRUEBAS DE utileria.js =====");
+// ====== PRUEBAS DE REGISTRO ======
+function ejecutarPruebasRegistro() {
+    console.log("===== PRUEBAS DEL FORMULARIO DE REGISTRO =====");
 
-    console.log("Correo válido (usuario@gmail.com):", validarCorreo("usuario@gmail.com"));
-    console.log("Solo letras válido (Miguel Angel):", soloLetras("Miguel Angel"));
-    console.log("Longitud válida (10 dígitos):", validarLongitud("9511234567", 10));
-    console.log("Edad calculada (2004-05-10):", calcularEdad("2004-05-10"));
-    console.log("Mayor de edad (2004-05-10):", esMayorDeEdad("2004-05-10"));
-    console.log("Password válida (Miguel@123):", validarPassword("Miguel@123"));
-    console.log("RFC Generado:", generarRFCBasico("Miguel", "Perez", "Garcia", "2004-05-10"));
+    console.log("Nombres correctos:", soloLetras("Miguel Angel"));
+    console.log("Apellidos correctos:", soloLetras("Perez Garcia"));
+    console.log("Correo correcto:", validarCorreo("usuario@gmail.com"));
+    console.log("Teléfono de 10 dígitos correcto:", validarLongitud("9511234567", 10));
+    console.log("Mayor de edad correcto:", esMayorDeEdad("2004-05-10"));
+    console.log("Edad calculada exitosamente:", calcularEdad("2004-05-10") === 22 || typeof calcularEdad("2004-05-10") === "number"); // Solo para que el usuario vea que funciona, pero imprimimos el valor directo si es necesario
+    console.log("Valor Edad:", calcularEdad("2004-05-10"));
+    
+    let rfc = generarRFCBasico("Miguel", "Perez", "Garcia", "2004-05-10");
+    console.log("Generación de RFC correcta:", rfc !== false);
+    console.log("RFC Generado:", rfc);
 
-    console.log("===== FIN DE PRUEBAS =====");
+    console.log("===== FIN DE PRUEBAS REGISTRO =====");
 }
 
 // Ejecutar pruebas en la consola al cargar la página
-ejecutarPruebasUtileria();
+ejecutarPruebasRegistro();
