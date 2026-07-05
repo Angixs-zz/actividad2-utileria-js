@@ -208,19 +208,41 @@ A continuación se muestran capturas que demuestran el funcionamiento de las val
 ![Formulario Validado Exitosamente](img/formularioValidado.png)
 *Vista exitosa del formulario una vez que todas las validaciones han sido completadas y muestra el modal que sale mostrando la edad de la persona registrada.*
 
-### 5. Resultado de pruebas existosas en consola para index
+### 5. Pruebas de Inicio de Sesión (Login)
+![Formulario Login Vacío](img/formularioVacioLogin.png)
+*Vista inicial del formulario de inicio de sesión vacío.*
+
+![Correo de Login Inválido](img/correoMaloLogin.png)
+*Alerta que notifica si el correo ingresado en el login no cumple con el formato.*
+
+![Contraseña Corta](img/contraMalaLogin.png)
+*Alerta que requiere que la contraseña tenga un mínimo de 8 caracteres.*
+
+![Contraseña sin Letra Mayúscula](img/contraSinMayuscula.png)
+*Alerta que notifica cuando a la contraseña le falta contener al menos una letra mayúscula.*
+
+![Contraseña sin Número](img/contraSinNumero.png)
+*Alerta que notifica cuando a la contraseña le falta contener al menos un número.*
+
+![Contraseña sin Carácter Especial](img/contraSinCaracter.png)
+*Alerta que notifica cuando a la contraseña le falta contener al menos un carácter especial.*
+
+![Login Exitoso](img/loginValidado.png)
+*Ventana modal que se muestra cuando las credenciales ingresadas son correctas y superan todas las validaciones.*
+
+### 6. Resultado de pruebas exitosas en consola para index
 ![Formulario Validado Exitosamente](img/pruebasIndexTrue.png)
 *Vista de la consola devolviendo un resultado true a las pruebas implementadas*
 
-### 6. Resultado de pruebas equivocadas en consola para index
+### 7. Resultado de pruebas equivocadas en consola para index
 ![Formulario no validado](img/pruebasIndexFalse.png)
 *Vista de la consola devolviendo un resultado false a las pruebas implementadas*
 
-### 7. Resultado de pruebas existosas en consola para login
+### 8. Resultado de pruebas exitosas en consola para login
 ![Formulario Validado Exitosamente](img/pruebasLoginTrue.png)
 *Vista de la consola devolviendo un resultado true a las pruebas implementadas*
 
-### 8. Resultado de pruebas negativas en consola para login
+### 9. Resultado de pruebas negativas en consola para login
 ![Formulario no validado](img/pruebasLoginFalse.png)
 *Vista de la consola devolviendo un resultado False a las pruebas implementadas*
 
