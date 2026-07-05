@@ -212,9 +212,17 @@ A continuación se muestran capturas que demuestran el funcionamiento de las val
 ![Formulario Validado Exitosamente](img/pruebasIndexTrue.png)
 *Vista de la consola devolviendo un resultado true a las pruebas implementadas*
 
-### 6. Resultado de pruebas existosas en consola para login
+### 6. Resultado de pruebas equivocadas en consola para index
+![Formulario no validado](img/pruebasIndexFalse.png)
+*Vista de la consola devolviendo un resultado false a las pruebas implementadas*
+
+### 7. Resultado de pruebas existosas en consola para login
 ![Formulario Validado Exitosamente](img/pruebasLoginTrue.png)
 *Vista de la consola devolviendo un resultado true a las pruebas implementadas*
+
+### 8. Resultado de pruebas negativas en consola para login
+![Formulario no validado](img/pruebasLoginFalse.png)
+*Vista de la consola devolviendo un resultado False a las pruebas implementadas*
 
 ## Video Demostrativo
 
